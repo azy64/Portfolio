@@ -1,13 +1,18 @@
 /*making the header design*/
 @font-face {
   font-family: "poppins";
-  src:url("./fonts/Poppins-Regular.ttf");
+  src:url("../fonts/Poppins-Regular.ttf");
   }
 .container{
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   font-family: poppins;
+  height: 100vh;
+}
+body {
+  background-image: url("../images/Header-bg.png");
+  background-size: cover;
 }
 *{
   font-family: "poppins" !important;
