@@ -1,8 +1,10 @@
 /* making the header design */
 @font-face {
-  font-family: "poppins";
+  font-family: "Poppins-Regular";
   src: url("../fonts/Poppins-Regular.ttf");
 }
+
+* { font-family: "Poppins-Regular", Helvetica, Arial, Verdana, Tahoma, sans-serif !important; }
 
 .container {
   display: flex;
@@ -15,8 +17,6 @@ body {
   background-image: url("../images/Header-bg.png");
   background-size: cover;
 }
-
-* { font-family: poppins !important; }
 
 .header {
   display: flex;
