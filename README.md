@@ -5,9 +5,10 @@ This project is one of the projects from my Microverse portfolio that aims to sh
 ![screenshot](./portfolio.png) 
 
 ## Built With
--HTML5
--CSS3
--LINTERS FOR HTML/CSS
+
+- HTML5
+- CSS3
+- LINTERS FOR HTML/CSS
 
 ## Authors
 
