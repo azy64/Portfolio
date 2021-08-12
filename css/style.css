@@ -144,6 +144,12 @@ header .logo .logo-title {
 
 /* media query for the header */
 @media screen and (max-width: 800px) {
+  .categories ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
   .header .menu ul {
     display: none;
     clear: both;
@@ -191,6 +197,7 @@ header .logo .logo-title {
     color: #344563;
     text-align: start;
   }
+
   .btn {
     width: auto;
     padding: 5px;
@@ -199,15 +206,8 @@ header .logo .logo-title {
     font-size: 17px;
     line-height: 24px;
     color: #396df2;
-    border:1px solid #396df2;
+    border: 1px solid #396df2;
     background-color: transparent;
-    
-  }
-
-  .categories ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
   }
 
   .categories ul li {
