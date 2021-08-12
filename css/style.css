@@ -11,6 +11,11 @@ body {
   background-size: cover;
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: auto;
+}
+
 .bg-white {
   background-color: #fff;
 }
