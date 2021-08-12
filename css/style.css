@@ -10,6 +10,7 @@ body {
   background-image: url("../images/Header-bg.png");
   background-size: cover;
 }
+
 .bg-white {
   background-color: #fff;
 }
@@ -18,14 +19,10 @@ body {
   display: flex;
   flex-direction: column;
 }
+
 .flex-row {
   display: flex;
   flex-direction: row;
-}
-
-.container {
-
-  height: 100vh;
 }
 
 .header {
@@ -40,6 +37,22 @@ header .logo .logo-title {
   padding-left: 5px;
 }
 
+.body .connection a {
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.body .social-network a {
+  text-decoration: none;
+}
+
+.header .menu ul li a {
+  text-decoration: none;
+  color: #344563;
+}
+
 .header .logo .logo-title a {
   color: #6070ff;
   text-decoration: none;
@@ -52,6 +65,7 @@ header .logo .logo-title {
 .border {
   border: 1px solid orangered;
 }
+
 .flex {
   flex: 1;
 }
@@ -71,13 +85,6 @@ header .logo .logo-title {
   margin: 15px;
 }
 
-.body .connection a {
-  text-decoration: none;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 500;
-}
-
 .body .social-network ul {
   padding: 0;
   margin: 0;
@@ -89,43 +96,62 @@ header .logo .logo-title {
   margin: 5px;
   margin-left: 0;
 }
-.body .social-network a {
-  text-decoration: none;
-}
 
-.header .menu ul li a {
-  text-decoration: none;
-  color: #344563;
-}
 /* media query for the header */
 @media screen and (max-width: 800px) {
   .header .menu ul {
-    display:none;
-    clear:both;
+    display: none;
+    clear: both;
   }
-  
+
   nav .mobile-menu {
     display: block;
-    text-align: center;
-    padding-top: 20px;
+    text-align: start;
+    padding-top: 10px;
+  }
+
+  .body {
+    align-self: center;
+    justify-self: center;
+    width: 90% !important;
+  }
+
+  .body .title h1 {
+    font-size: 40px;
+    line-height: 52px;
+    font-weight: 700;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  header .logo .logo-title {
+    font-size: 18px;
+    line-height: 20px;
+    padding-left: 15px;
   }
 
   nav .mobile-menu img {
-    width:50px;
+    width: 30px;
     cursor: pointer;
     border: 1px solid transparent;
   }
+
   nav .mobile-menu img:active {
     border: 1px solid gray;
+  }
+
+  .body .content p {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #344563;
+    text-align: start;
   }
 }
 
 /* making the body design***************** */
 
 .body {
-  display: flex;
-  flex-direction: column;
-  padding: 15px;
   align-self: center;
   justify-self: center;
   width: 70%;
@@ -134,10 +160,13 @@ header .logo .logo-title {
 .body .title {
   font-size: 48px;
   line-height: 60px;
+  font-weight: 700;
+  color: #172b4d;
 }
 
 .body .content p {
   font-size: 20px;
   line-height: 28px;
   font-weight: 400;
+  color: #344563;
 }
