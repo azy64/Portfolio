@@ -16,8 +16,48 @@ body {
   grid-template-columns: auto;
 }
 
+.w-100 {
+  width: 100% !important;
+}
+
+.w-90 {
+  width: 90% !important;
+}
+
+.b-rounded-right {
+  border-radius: 0 80px 0 0;
+}
+
+.p-15 {
+  padding-left: 10px;
+}
+
+.row-gap-100 {
+  grid-row-gap: 100px;
+}
+
 .bg-white {
   background-color: #fff;
+}
+
+.m-t-5 {
+  margin-top: 10px;
+}
+
+.m-b-5 {
+  margin-bottom: 10px;
+}
+
+.m-r-5 {
+  margin-right: 10px;
+}
+
+.m-l-5 {
+  margin-left: 10px;
+}
+
+.p-5 {
+  padding: 15px !important;
 }
 
 .flex-column {
@@ -118,7 +158,6 @@ header .logo .logo-title {
   .body {
     align-self: center;
     justify-self: center;
-    width: 90% !important;
   }
 
   .body .title h1 {
@@ -151,6 +190,18 @@ header .logo .logo-title {
     font-weight: 400;
     color: #344563;
     text-align: start;
+  }
+  .btn {
+    width: auto;
+    padding: 5px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 24px;
+    color: #396df2;
+    border:1px solid #396df2;
+    background-color: transparent;
+    
   }
 }
 
