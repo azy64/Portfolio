@@ -203,6 +203,42 @@ header .logo .logo-title {
     background-color: transparent;
     
   }
+
+  .categories ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .categories ul li {
+    border-bottom: 1px solid #dfe1e6;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+  .categories ul li .text {
+    display: inline-block;
+    width: 80%;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .categories ul li .icon {
+    display: inline-block;
+    position: relative;
+    bottom: -10px;
+    cursor: pointer;
+  }
+
+  .categories ul li .icon img {
+    border: 1px solid transparent;
+  }
+
+  .categories ul li .icon img:active {
+    border: 1px solid #dfe1e6;
+  }
 }
 
 /* making the body design***************** */
