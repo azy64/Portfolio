@@ -71,6 +71,10 @@ body {
   border-radius: 16px;
 }
 
+.b-top-left-rounded {
+  border-radius: 80px 0 0 0 !important;
+}
+
 .b-1 {
   border: 1px solid #dfe1e6;
 }
@@ -93,6 +97,39 @@ body {
 
 .m-t-5 {
   margin-top: 10px;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.contact-text {
+
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  color: #ebebff;
+}
+
+.contact-form {
+  text-align: center;
+}
+
+.contact-form input, .contact-form textarea {
+  border: 1px solid #CFD8DC;
+  border-radius: 8px;
+  padding: 8px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.contact-form textarea {
+  min-height: 100px;
+  font-weight: normal;
+  text-align: start !important;
+  color: #b3bac5;
+  
 }
 
 .m-b-5 {
@@ -207,6 +244,12 @@ header .logo .logo-title {
   display: inline-block;
   margin: 5px;
   margin-left: 0;
+}
+
+.contact {
+  background: #6070FF;
+  text-align: center;
+  padding-top: 100px !important;
 }
 
 /* media query for the header */
@@ -336,8 +379,8 @@ header .logo .logo-title {
 
   .card {
     margin: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
 
   .card .card-group {
@@ -414,6 +457,14 @@ header .logo .logo-title {
     display: block;
     width: 100px;
     text-align: center;
+  }
+
+  .contact h2 {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 52px;
+    text-align: center;
+    color: #FFFFFF;
   }
 }
 
