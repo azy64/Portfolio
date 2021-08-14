@@ -72,7 +72,7 @@ body {
 }
 
 .b-1 {
-  border:1px solid #dfe1e6
+  border: 1px solid #dfe1e6;
 }
 
 .p-l-15 {
@@ -255,6 +255,13 @@ header .logo .logo-title {
     border: 1px solid transparent;
   }
 
+  .card-sub-title .counter img {
+    margin-left: 5px;
+    margin-right: 5px;
+    position: relative;
+    top: -2px;
+  }
+
   nav .mobile-menu img:active {
     border: 1px solid gray;
   }
@@ -326,6 +333,7 @@ header .logo .logo-title {
     color: #253858;
     padding: 7px;
   }
+
   .card {
     margin: auto;
     margin-top: 10px;
@@ -335,9 +343,11 @@ header .logo .logo-title {
   .card .card-group {
     display: grid;
     grid-template-columns: auto;
-    justify-content: end;
-    align-items: space-around;
-   grid-row-gap: 15px;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 10%;
+    align-content: center;
+    grid-row-gap: 7px;
   }
 
   .card-title h2 {
@@ -346,7 +356,65 @@ header .logo .logo-title {
     font-size: 32px !important;
     line-height: 44px !important;
     color: #172b4d !important;
-  } 
+  }
+
+  .card-sub-title b {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    color: #344563;
+  }
+
+  .card-sub-title .counter {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    color: #7a869a;
+  }
+
+  .card-content {
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 24px;
+    color: #344563;
+  }
+
+  .card-link {
+    padding: 5px;
+    padding-left: 0;
+    margin-bottom: 8px;
+  }
+
+  .card-link a {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    color: #6070ff;
+    background: #ebebff;
+    border-radius: 8px;
+    padding: 4px 12px;
+    text-decoration: none;
+  }
+
+  .card-sup {
+    margin-bottom: 25px;
+    margin-top: 7px;
+  }
+
+  .card-sup a {
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 24px;
+    color: #396df2;
+    border: 1px solid #396df2;
+    background-color: transparent;
+    display: block;
+    width: 100px;
+    text-align: center;
+  }
 }
 
 /* making the body design***************** */
