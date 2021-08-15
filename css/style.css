@@ -491,6 +491,8 @@ header .logo .logo-title {
   align-self: center;
   justify-self: center;
   width: 70%;
+  background-image: url("../images/bac.png");
+  background-size: cover;
 }
 
 .body .title {
