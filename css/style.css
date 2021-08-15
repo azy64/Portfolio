@@ -16,6 +16,10 @@ body {
   background: #e5e5e5;
 }
 
+.align-left {
+  text-align: start;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: auto;
@@ -132,8 +136,20 @@ body {
   
 }
 
+.contact-form input[type=submit] {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #6070ff;
+  padding: 12px;
+  margin-left: 8px;
+}
+
 .m-b-5 {
-  margin-bottom: 10px;
+  margin-bottom: 10px !important;
 }
 
 .m-r-5 {
@@ -247,7 +263,8 @@ header .logo .logo-title {
 }
 
 .contact {
-  background: #6070FF;
+  background: #6070ff;
+  background-image: url("../images/bac.png");
   text-align: center;
   padding-top: 100px !important;
 }
