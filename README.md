@@ -11,6 +11,10 @@ This project is one of the projects from my Microverse portfolio that aims to sh
 - CSS GRID AND FLEXBOX
 - LINTERS FOR HTML/CSS
 
+## Live Demo
+
+[Live Demo Link](https://azy64.github.io/Portfolio/)
+
 ## Authors
 
 👤 **AZARIA SAIDI ALLY**
