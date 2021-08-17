@@ -2,7 +2,7 @@
 
 This project is one of the projects from my Microverse portfolio that aims to show you my skills in web design and responsive design
 
-![screenshot](./user-works-section.png) 
+![screenshot](./images/user-works-section.png) 
 
 ## Built With
 
