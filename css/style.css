@@ -444,6 +444,16 @@ header .logo .logo-title {
     margin-bottom: 8px;
   }
 
+  .card-link-group {
+    margin: 0;
+    padding: 0;
+  }
+
+  .card-link-group li {
+    list-style: none !important;
+    display: inline-block !important;
+  }
+
   .card-link a {
     font-weight: 500;
     font-size: 12px;
