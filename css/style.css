@@ -8,11 +8,175 @@
 
 body {
   background-image: url("../images/Header-bg.png");
-  background-size: cover;
+  background-repeat: no-repeat;
+  border-right: 0 !important;
+}
+
+.container {
+  background: #e5e5e5;
+}
+
+.align-left {
+  text-align: start;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto;
+  width: 100% !important;
+  overflow: hidden !important;
+}
+
+.space-around {
+  justify-content: space-around;
+}
+
+.grid-container-2 {
+  display: grid !important;
+  grid-template-columns: 20% auto !important;
+  align-content: center !important;
+  justify-content: start;
+  grid-column-gap: 18px;
+}
+
+.line-height-60 {
+  line-height: 60px;
+}
+
+.w-100 {
+  width: 100% !important;
+}
+
+.w-90 {
+  width: 90% !important;
+}
+
+.w-80 {
+  width: 80% !important;
+}
+
+.w-70 {
+  width: 70% !important;
+}
+
+.block {
+  display: block;
+}
+
+.b-rounded-right {
+  border-radius: 0 80px 0 0;
+}
+
+.b-rounded-left {
+  border-radius: 0 0 0 40px !important;
+}
+
+.b-rounded {
+  border-radius: 16px;
+}
+
+.b-top-left-rounded {
+  border-radius: 80px 0 0 0 !important;
+}
+
+.b-1 {
+  border: 1px solid #dfe1e6;
+}
+
+.p-l-15 {
+  padding-left: 18px;
+}
+
+.p-t-10 {
+  padding-top: 15px;
+}
+
+.row-gap-100 {
+  grid-row-gap: 0;
 }
 
 .bg-white {
   background-color: #fff;
+}
+
+.m-t-5 {
+  margin-top: 10px;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.contact-text {
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  color: #ebebff;
+}
+
+.contact-form {
+  text-align: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+  border: 1px solid #cfd8dc;
+  border-radius: 8px;
+  padding: 8px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.contact-form textarea {
+  min-height: 100px;
+  font-weight: normal;
+  text-align: start !important;
+  color: #b3bac5;
+}
+
+.contact-form input[type=submit] {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #6070ff;
+  padding: 12px;
+  margin-left: 8px;
+}
+
+.m-b-5 {
+  margin-bottom: 10px !important;
+}
+
+.m-r-5 {
+  margin-right: 10px;
+}
+
+.m-l-5 {
+  margin-left: 10px;
+}
+
+.m-l-15 {
+  margin-left: 18px;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.p-5 {
+  padding: 15px !important;
+}
+
+.underline-none {
+  text-decoration: none;
+}
+
+.p-0 {
+  padding: 0;
 }
 
 .flex-column {
@@ -97,8 +261,21 @@ header .logo .logo-title {
   margin-left: 0;
 }
 
+.contact {
+  background: #6070ff;
+  background-image: url("../images/bac.png");
+  text-align: center;
+  padding-top: 100px !important;
+}
+
 /* media query for the header */
 @media screen and (max-width: 800px) {
+  .categories ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
   .header .menu ul {
     display: none;
     clear: both;
@@ -113,7 +290,8 @@ header .logo .logo-title {
   .body {
     align-self: center;
     justify-self: center;
-    width: 90% !important;
+    margin-right: 0 !important;
+    padding: 0 !important;
   }
 
   .body .title h1 {
@@ -136,6 +314,13 @@ header .logo .logo-title {
     border: 1px solid transparent;
   }
 
+  .card-sub-title .counter img {
+    margin-left: 5px;
+    margin-right: 5px;
+    position: relative;
+    top: -2px;
+  }
+
   nav .mobile-menu img:active {
     border: 1px solid gray;
   }
@@ -147,6 +332,156 @@ header .logo .logo-title {
     color: #344563;
     text-align: start;
   }
+
+  .btn {
+    width: auto;
+    padding: 5px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 24px;
+    color: #396df2;
+    border: 1px solid #396df2;
+    background-color: transparent;
+  }
+
+  .categories ul li {
+    border-bottom: 1px solid #dfe1e6;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+  .categories ul li .text {
+    display: inline-block;
+    width: 80%;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .position-null {
+    position: static !important;
+  }
+
+  .categories ul li .icon {
+    display: inline-block;
+    position: relative;
+    bottom: -5px;
+    cursor: pointer;
+  }
+
+  .categories ul li .icon img {
+    border: 1px solid transparent;
+  }
+
+  .categories ul li .icon img:active {
+    border: 1px solid #dfe1e6;
+  }
+
+  #item1 .techno li {
+    background: #f7f7f9 !important;
+    display: block;
+    border: none !important;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    color: #253858;
+    padding: 7px;
+  }
+
+  .card {
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .card .card-group {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 10%;
+    align-content: center;
+    grid-row-gap: 7px;
+  }
+
+  .card-title h2 {
+    font-style: normal;
+    font-weight: bold !important;
+    font-size: 32px !important;
+    line-height: 44px !important;
+    color: #172b4d !important;
+  }
+
+  .card-sub-title b {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    color: #344563;
+  }
+
+  .card-sub-title .counter {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    color: #7a869a;
+  }
+
+  .card-content {
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 24px;
+    color: #344563;
+  }
+
+  .card-link {
+    padding: 5px;
+    padding-left: 0;
+    margin-bottom: 8px;
+  }
+
+  .card-link a {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    color: #6070ff;
+    background: #ebebff;
+    border-radius: 8px;
+    padding: 4px 12px;
+    text-decoration: none;
+  }
+
+  .card-sup {
+    margin-bottom: 25px;
+    margin-top: 7px;
+  }
+
+  .card-sup a {
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 24px;
+    color: #396df2;
+    border: 1px solid #396df2;
+    background-color: transparent;
+    display: block;
+    width: 100px;
+    text-align: center;
+  }
+
+  .contact h2 {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 52px;
+    text-align: center;
+    color: #fff;
+  }
 }
 
 /* making the body design***************** */
@@ -155,6 +490,11 @@ header .logo .logo-title {
   align-self: center;
   justify-self: center;
   width: 70%;
+  background-image: url("../images/bac.png");
+
+  /* background-size: cover;  */
+  background-repeat: no-repeat;
+  background-position: 20% 20%;
 }
 
 .body .title {
