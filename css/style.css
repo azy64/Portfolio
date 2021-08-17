@@ -492,7 +492,9 @@ header .logo .logo-title {
   justify-self: center;
   width: 70%;
   background-image: url("../images/bac.png");
-  background-size: cover;
+  /* background-size: cover;  */
+  background-repeat: no-repeat;
+  background-position: 20% 20%;
 }
 
 .body .title {
