@@ -329,17 +329,17 @@
 
             </div>
         </section>
-        <div class="contact w-100 b-top-left-rounded">
+        <section class="contact w-100 b-top-left-rounded">
             <h2 class="w-100">Contact me</h2>
             <div class=" contact-text w-90 p-15 m-auto">
                 <p>
                     If you have an application you are interested in developing,
                  a feature that you need built or a project that needs coding. I’d love to help with it
                 </p>
-                <form class="contact-form w-100 m-auto">
-                    <input type="text" required class="w-90" placeholder=" Your name" id="name"/>
-                    <input type="text" required class="w-90" placeholder="natajayanj14@gmail.com" id="email"/>
-                    <textarea class="w-90" required>
+                <form class="contact-form w-100 m-auto" action="https://formspree.io/f/xwkawzyq" method="POST">
+                    <input type="text" maxlength="30" required class="w-90" placeholder=" Your name" id="name" name="name"/>
+                    <input type="text" maxlength="30" required class="w-90" placeholder="natajayanj14@gmail.com" id="email" name="email"/>
+                    <textarea class="w-90" required maxlength="500" required>
                         Write your message here
                     </textarea>
                     <div class="w-90 align-left m-b-5">
@@ -348,7 +348,7 @@
                     
                 </form>
             </div>
-        </div>
+        </section>
     </div>
 </body>
 
