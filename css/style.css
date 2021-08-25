@@ -6,12 +6,6 @@
 
 * { font-family: "Poppins-Regular", Helvetica, Arial, Verdana, Tahoma, sans-serif !important; }
 
-body {
-  background-image: url("../images/Header-bg.png");
-  background-repeat: no-repeat;
-  border-right: 0 !important;
-}
-
 .container {
   background: #e5e5e5;
 }
