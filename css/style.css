@@ -649,8 +649,8 @@ header .logo .logo-title {
   }
 
   .card-sup {
-    margin-bottom: 25px;
-    margin-top: 7px;
+    margin:25px;
+    margin-left: 0;
   }
 
   .card-sup a {
@@ -665,4 +665,8 @@ header .logo .logo-title {
     display: block;
     width: 100px;
     text-align: center;
+  }
+  .card-sup a:hover {
+    color: #fff;
+    background-color: #4053fc;
   }
