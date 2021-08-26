@@ -26,6 +26,15 @@
   text-align: start;
 }
 
+.align-left-center {
+  text-align: center;
+}
+
+.align-center {
+  justify-content: center;
+  align-items: center;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: auto;
@@ -39,10 +48,9 @@
 
 .grid-container-2 {
   display: grid !important;
-  grid-template-columns: 20% auto !important;
+  grid-template-rows: auto auto !important;
   align-content: center !important;
-  justify-content: start;
-  grid-column-gap: 18px;
+  justify-content: center;
 }
 
 .line-height-60 {
@@ -50,8 +58,8 @@
 }
 
 .self-center {
-  justify-self: center;
-  align-self: center;
+  justify-self: center !important;
+  align-self: center !important;
 }
 
 .w-100 {
@@ -71,6 +79,9 @@
 }
 .w-sm-70 {
   width: 70% !important;
+}
+.w-sm-50 {
+  width: 50% !important;
 }
 
 .block {
@@ -104,6 +115,11 @@
 .p-t-10 {
   padding-top: 5px;
 }
+
+.p-b-10 {
+  padding-bottom: 15px;
+}
+
 .p-t-sm-30 {
   padding-top: 10%;
 }
@@ -201,6 +217,11 @@
   flex-direction: column;
 }
 
+.flex-sm-column {
+  display: flex;
+  flex-direction: row;
+}
+
 .flex-row {
   display: flex;
   flex-direction: row;
@@ -287,14 +308,41 @@ header .logo .logo-title {
 }
 
 .contact {
-  background: #6070ff;
-  background-image: url("../images/bac.png");
   text-align: center;
   padding-top: 100px !important;
+}
+.bg-image-contact {
+  background: #6070ff;
+  background-image: url("../images/contact-form.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /* ---------------------------------------media query for the header---------------------------------- */
 @media screen and (max-width: 800px) {
+
+  .grid-container-2 {
+    display: grid !important;
+    grid-template-columns: 20% auto !important;
+    align-content: center !important;
+    justify-content: start;
+    grid-column-gap: 18px;
+  }
+
+  .bg-image-contact {
+    background: #6070ff;
+    background-image: url("../images/bac.png");
+    background-repeat: no-repeat;
+  }
+
+  .align-left-center {
+    text-align: start !important;
+  }
+
+  .flex-sm-column {
+    display: flex;
+    flex-direction: column;
+  }
 
   .p-t-10 {
     padding-top: 15px;
@@ -316,6 +364,9 @@ header .logo .logo-title {
   width: 70% !important;
 }
 .w-sm-70 {
+  width: 100% !important;
+}
+.w-sm-50 {
   width: 100% !important;
 }
 
@@ -403,15 +454,15 @@ header .logo .logo-title {
   }
 
   .categories ul li {
-    border-bottom: 1px solid #dfe1e6;
-    padding-top: 6px;
-    padding-bottom: 6px;
+    border-bottom: 1px solid #dfe1e6 !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
   }
 
   .categories ul li .text {
-    display: inline-block;
-    width: 80%;
-    font-style: normal;
+    display: inline-block !important;
+    width: 80% !important;
+    font-style: normal !important;
     font-weight: 500;
     font-size: 20px;
     line-height: 24px;
@@ -422,14 +473,14 @@ header .logo .logo-title {
   }
 
   .categories ul li .icon {
-    display: inline-block;
-    position: relative;
-    bottom: -5px;
-    cursor: pointer;
+    display: inline-block !important;
+    position: relative !important;
+    bottom: -5px !important;
+    cursor: pointer !important;
   }
 
   .categories ul li .icon img {
-    border: 1px solid transparent;
+    border: 1px solid transparent !important;
   }
 
   .categories ul li .icon img:active {
@@ -438,15 +489,15 @@ header .logo .logo-title {
 
   #item1 .techno li {
     background: #f7f7f9 !important;
-    display: block;
     border: none !important;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    border-radius: 5px;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 20px;
+    margin-bottom: 10px !important;
+    margin-top: 10px !important;
+    border-radius: 5px !important;
+    font-weight: 500 !important;
+    font-size: 15px !important;
+    line-height: 20px !important;
     color: #253858;
+    width: 90% !important;
     padding: 7px;
   }
 
@@ -537,13 +588,6 @@ header .logo .logo-title {
     text-align: center;
   }
 
-  .contact h2 {
-    font-weight: bold;
-    font-size: 40px;
-    line-height: 52px;
-    text-align: center;
-    color: #fff;
-  }
   .bg-image {
     align-self: center;
     justify-self: center;
@@ -669,4 +713,90 @@ header .logo .logo-title {
   .card-sup a:hover {
     color: #fff;
     background-color: #4053fc;
+  }
+
+  .btn {
+    width: auto;
+    padding: 5px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 24px;
+    color: #396df2;
+    border: 1px solid #396df2;
+    background-color: transparent;
+    margin: 26px;
+    margin-left: 0;
+  }
+  /* ------------------------defening categories------------------------------ */
+  .categories ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  /*******************************************************************************************************/
+  .categories ul li {
+    border-bottom: 1px solid #dfe1e6;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    list-style: none;
+  }
+
+  .categories ul li .text {
+    display: inline-block;
+    width: 80%;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #344563;
+  }
+  .position-null {
+    position: static !important;
+  }
+
+  .categories ul li .icon {
+    display: inline-block;
+    position: relative;
+    bottom: -5px;
+    cursor: pointer;
+  }
+
+  .categories ul li .icon img {
+    border: 1px solid transparent;
+  }
+
+  .categories ul li .icon img:active {
+    border: 1px solid #dfe1e6;
+  }
+
+  #item1 .techno li {
+    background: #f7f7f9 !important;
+    float: left;
+    border: none !important;
+    margin-bottom: 16px;
+    margin-top: 26px;
+    margin-left: 4px;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    color: #253858;
+    padding: 10px;
+    width:100px;
+  }
+  .text-title{
+    display: block !important;
+  }
+
+  .contact {
+    min-height: 600px;
+    padding-bottom: 7%;
+  }
+  .contact h2 {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 52px;
+    text-align: center;
+    color: #fff;
   }
