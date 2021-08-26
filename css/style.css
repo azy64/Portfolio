@@ -10,6 +10,18 @@
   background: #e5e5e5;
 }
 
+.min-height{
+  min-height: 516px;
+}
+.bg-image {
+  align-self: center;
+  justify-self: center;
+  width: 100%;
+  background-image: url("../images/Header-bg-d.png");
+  background-size: cover; 
+  background-repeat: no-repeat;
+}
+
 .align-left {
   text-align: start;
 }
@@ -37,6 +49,11 @@
   line-height: 60px;
 }
 
+.self-center {
+  justify-self: center;
+  align-self: center;
+}
+
 .w-100 {
   width: 100% !important;
 }
@@ -52,6 +69,9 @@
 .w-70 {
   width: 70% !important;
 }
+.w-sm-70 {
+  width: 70% !important;
+}
 
 .block {
   display: block;
@@ -62,7 +82,7 @@
 }
 
 .b-rounded-left {
-  border-radius: 0 0 0 40px !important;
+  border-radius: 0 0 0 160px !important;
 }
 
 .b-rounded {
@@ -83,6 +103,9 @@
 
 .p-t-10 {
   padding-top: 15px;
+}
+.p-t-sm-30 {
+  padding-top: 10%;
 }
 
 .row-gap-100 {
@@ -188,11 +211,11 @@
 }
 
 .header .logo {
-  flex: 3;
+  flex: 2;
 }
 
 header .logo .logo-title {
-  padding-left: 5px;
+  padding-left: 15%;
 }
 
 .body .connection a {
@@ -209,15 +232,23 @@ header .logo .logo-title {
 .header .menu ul li a {
   text-decoration: none;
   color: #344563;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .header .logo .logo-title a {
   color: #6070ff;
   text-decoration: none;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
 }
 
 .header .menu {
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 .border {
@@ -262,8 +293,31 @@ header .logo .logo-title {
   padding-top: 100px !important;
 }
 
-/* media query for the header */
+/* ---------------------------------------media query for the header---------------------------------- */
 @media screen and (max-width: 800px) {
+
+  .w-100 {
+  width: 100% !important;
+}
+
+.w-90 {
+  width: 90% !important;
+}
+
+.w-80 {
+  width: 80% !important;
+}
+
+.w-70 {
+  width: 70% !important;
+}
+.w-sm-70 {
+  width: 100% !important;
+}
+
+.b-rounded-left {
+  border-radius: 0 0 0 40px !important;
+}
   .categories ul {
     padding: 0;
     margin: 0;
@@ -277,7 +331,7 @@ header .logo .logo-title {
 
   nav .mobile-menu {
     display: block;
-    text-align: start;
+    text-align: center;
     padding-top: 10px;
   }
 
@@ -441,7 +495,7 @@ header .logo .logo-title {
     padding: 5px;
     padding-left: 0;
     margin-bottom: 8px;
-  }
+  } 
 
   .card-link-group {
     margin: 0;
@@ -486,22 +540,23 @@ header .logo .logo-title {
     text-align: center;
     color: #fff;
   }
+  .bg-image {
+    align-self: center;
+    justify-self: center;
+    width: 70%;
+    background-image: url("../images/bac.png");
+    
+    /* background-size: cover;  */
+    background-repeat: no-repeat;
+    background-position: 20% 20%;
+  }
 }
 
-/* making the body design***************** */
+/* ------------------------------------making the body design---------------------------***************** */
 
-.body {
-  align-self: center;
-  justify-self: center;
-  width: 70%;
-  background-image: url("../images/bac.png");
 
-  /* background-size: cover;  */
-  background-repeat: no-repeat;
-  background-position: 20% 20%;
-}
 
-.body .title {
+.body .title  h1{
   font-size: 48px;
   line-height: 60px;
   font-weight: 700;
