@@ -274,9 +274,10 @@ header .logo .logo-title {
 
 .body .connection a {
   text-decoration: none;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 24px;
   font-weight: 500;
+  color: #7F8CFF;
 }
 
 .body .social-network a {
@@ -355,13 +356,15 @@ header .logo .logo-title {
 .body .social-network ul {
   padding: 0;
   margin: 0;
+  margin-bottom: 30px !important;
+  margin-top: 10px;
   list-style: none;
 }
 
 .body .social-network ul li {
   display: inline-block;
   margin: 5px;
-  margin-left: 0;
+  margin-left: 11px;
 }
 
 .bg-image-contact {
@@ -653,6 +656,22 @@ header .logo .logo-title {
     background-repeat: no-repeat;
     background-position: 20% 20%;
   }
+  .order {
+    order: 1 !important;
+  }
+  
+  .order-2 {
+    order: 1 !important;
+  }
+  
+  .order-3 {
+    order: 1 !important;
+  }
+  
+  .order-4 {
+    order: 1 !important;
+  }
+  
 }
 
 /* ------------------------------------making the body design---------------------------***************** */
@@ -816,11 +835,11 @@ header .logo .logo-title {
 }
 
 .order {
-  order: -1 !important;
+  order: -1;
 }
 
 .order-2 {
-  order: 2 !important;
+  order: 2;
 }
 
 .order-3 {
