@@ -163,6 +163,9 @@
   margin-top: 10px;
   margin-bottom: 15px;
 }
+::placeholder {
+  color: #172b4d !important;
+}
 
 .contact-form textarea {
   min-height: 100px;
@@ -345,6 +348,7 @@ header .logo .logo-title {
   display: inline-block;
   list-style: none;
   margin: 15px;
+  margin-top: 11%;
 }
 
 .body .social-network ul {
@@ -366,7 +370,7 @@ header .logo .logo-title {
   background-repeat: no-repeat;
 }
 
-/* ---------------------------------------media query for the header---------------------------------- */
+/* ---------------------------------------media query for the mobile version---------------------------------- */
 @media screen and (max-width: 800px) {
   .grid-container-2 {
     display: grid !important;
@@ -656,7 +660,7 @@ header .logo .logo-title {
   font-size: 48px;
   line-height: 60px;
   font-weight: 700;
-  color: #172b4d;
+  color: #091E42;
 }
 
 .body .content p {
@@ -689,7 +693,7 @@ header .logo .logo-title {
   font-weight: bold !important;
   font-size: 32px !important;
   line-height: 44px !important;
-  color: #172b4d !important;
+  color: #091E42 !important;
 }
 
 .card-sub-title b {
@@ -807,4 +811,16 @@ header .logo .logo-title {
   line-height: 52px;
   text-align: center;
   color: #fff;
+}
+.order {
+  order: -1 !important;
+}
+.order-2{
+  order: 2 !important;
+}
+.order-3 {
+  order:3 !important;
+}
+.order-4{
+  order: 4 !important;
 }
