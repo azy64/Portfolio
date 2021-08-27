@@ -687,6 +687,7 @@ header .logo .logo-title {
   padding: 2%;
   align-content: center;
   grid-row-gap: 7px;
+  border: 2px solid #DFE1E6 !important;
 }
 
 .card-title h2 {
