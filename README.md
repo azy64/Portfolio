@@ -1,4 +1,4 @@
-# PORTFOLIO PROJECT 2
+# PORTFOLIO PROJECT 2 AND APPLICATION DEPLOY
 
 This project is one of the projects from my Microverse portfolio that aims to show you my skills in web design and responsive design
 
