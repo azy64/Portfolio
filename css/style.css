@@ -299,7 +299,7 @@ header .logo .logo-title {
 }
 
 .header .logo .logo-title a {
-  color: #6070ff;
+  color: #6070ff !important;
   text-decoration: none;
   font-style: normal;
   font-weight: bold;
