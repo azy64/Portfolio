@@ -12,9 +12,6 @@ const displayMenu=()=>{
 const hideMenu=()=>{
     crossElement.addEventListener("click",function(){
         mobileMenu.classList.add("hidden")
-        console.log(document.querySelector(".tunaweza-menu").classList);
-        console.log(mobileMenu.className);
-        //e.preventDefault();
     });
 }
 const menuItemsClicked=()=>{
@@ -23,7 +20,6 @@ const menuItemsClicked=()=>{
     anchors.forEach((anchor)=>{
         anchor.addEventListener("click",function(e){
             mobileMenu.classList.add("hidden")
-            //e.preventDefault();
         });
     })
 }
