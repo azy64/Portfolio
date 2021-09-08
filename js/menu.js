@@ -232,6 +232,7 @@ const validation = () => {
   email.addEventListener('input', () => {
     if (email.validity.typeMismatch) {
       form.appendChild(span);
+      document.querySelector('form').addEventListener('submit', (e) => { e.preventDefault(); });
     }
   });
 };
