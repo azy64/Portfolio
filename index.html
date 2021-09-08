@@ -214,12 +214,14 @@
                         <form class="contact-form w-100 m-auto" action="https://formspree.io/f/xwkawzyq" method="POST">
                             <input aria-labelledby="name" type="text" maxlength="30" required class="w-90" placeholder=" Your name" id="name"
                                 name="name" />
-                            <input type="text" aria-labelledby="email" maxlength="30" required class="w-90" placeholder="natajayanj14@gmail.com"
+                            <input type="email" pattern="^[a-z0-9._\-#]+@[a-z0-9-]+(?:\.[a-z0-9-]+)*$" 
+                            aria-labelledby="email" maxlength="30" required 
+                            class="w-90" placeholder="natajayanj14@gmail.com"
                                 id="email" name="email" />
                             <textarea aria-labelledby="message" class="w-90" required maxlength="500" name="message" id="message">
                             Write your message here
                         </textarea>
-                            <div class="w-90 align-left-center m-b-5">
+                            <div class="w-90 align-left-center m-b-5" id="error">
                                 <input type="submit" value="Get It Touch" />
                             </div>
 

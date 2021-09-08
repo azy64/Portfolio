@@ -4,7 +4,8 @@ const mobileMenu = document.querySelector('#mobile-menu');
 const works = document.querySelector('.works');
 const popupWindow = document.querySelector('.popup-window');
 let content = '';
-console.log(window.innerWidth);
+const email = document.querySelector('input[type="email"]');
+const form = document.querySelector('#error');
 // const menuItems= document.querySelector("options");
 const projets = [
   {
@@ -223,8 +224,20 @@ const displayPopup = () => {
   });
 };
 
+const validation = () => {
+  const span = document.createElement('span');
+  span.textContent = 'invalid emai';
+  span.classList.add('text-red');
+  span.classList.add('m-l-5');
+  email.addEventListener('input', () => {
+    if (email.validity.typeMismatch) {
+      form.appendChild(span);
+    }
+  });
+};
 addProjects();
 hideMenu();
 displayMenu();
 menuItemsClicked();
 displayPopup();
+validation();
