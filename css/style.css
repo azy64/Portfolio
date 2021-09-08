@@ -14,6 +14,28 @@
   display: grid;
 }
 
+.text-bold {
+  font-weight: bold;
+}
+
+.popup-title {
+  font-size: 32px;
+  line-height: 44px;
+}
+
+.text-blue-custom {
+  color: #172b4d;
+}
+
+.text-blue-text {
+
+  color: #344563;
+}
+
+.overflow-scroll {
+  overflow-y: auto !important;
+}
+
 .col {
   grid-template-columns: auto;
 }
@@ -120,6 +142,10 @@
   height: 70%;
 }
 
+.h-50 {
+  height: 50% !important;
+}
+
 .top-left {
   left: 0;
   top: 0;
@@ -216,6 +242,10 @@
 
 .p-t-sm-30 {
   padding-top: 10%;
+}
+
+.p-8 {
+  padding: 8px !important;
 }
 
 .row-gap-100 {
@@ -329,7 +359,7 @@
 }
 
 .p-0 {
-  padding: 0;
+  padding: 0 !important;
 }
 
 .flex-column {
