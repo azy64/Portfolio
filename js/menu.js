@@ -5,7 +5,8 @@ const works = document.querySelector('.works');
 const popupWindow = document.querySelector('.popup-window');
 let content = '';
 const email = document.querySelector('input[type="email"]');
-const form = document.querySelector('#error');
+const errorTag = document.querySelector('#error');
+const form = document.querySelector('form');
 // const menuItems= document.querySelector("options");
 const projets = [
   {
@@ -224,15 +225,40 @@ const displayPopup = () => {
   });
 };
 
+const showMessage = (tagElement, targetElement) => {
+  tagElement.textContent = '';
+  tagElement.textContent = targetElement.validationMessage;
+  errorTag.appendChild(tagElement);
+};
 const validation = () => {
   const span = document.createElement('span');
-  span.textContent = 'invalid emai';
   span.classList.add('text-red');
   span.classList.add('m-l-5');
+  span.classList.add('text-small');
+  span.classList.add('text-bold');
+  span.classList.add('bg-white');
   email.addEventListener('input', () => {
     if (email.validity.typeMismatch) {
-      form.appendChild(span);
-      document.querySelector('form').addEventListener('submit', (e) => { e.preventDefault(); });
+      showMessage(span, email);
+    }
+    if (email.validity.valid) {
+      span.textContent = '';
+    }
+  });
+  email.addEventListener('focus', () => {
+    if (email.validity.valueMissing) {
+      showMessage(span, email);
+    }
+    if (email.validity.valid) {
+      span.textContent = '';
+    }
+  });
+  form.addEventListener('submit', (e) => {
+    if (!email.validity.valid) {
+      showMessage(span, email);
+      e.preventDefault();
+    } else {
+      form.submit();
     }
   });
 };

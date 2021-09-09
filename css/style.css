@@ -18,6 +18,10 @@ input[type="email"]:invalid + input[type="submit"]::after {
   content: "jnjnjnjnjn";
 }
 
+.text-small {
+  font-size: 11px;
+}
+
 .grid {
   display: grid;
 }
@@ -27,7 +31,7 @@ input[type="email"]:invalid + input[type="submit"]::after {
 }
 
 .text-red {
-  color: orangered;
+  color: red;
 }
 
 .popup-title {
