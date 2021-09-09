@@ -1,3 +1,9 @@
+let formData = {
+  name: '',
+  email: '',
+  message: '',
+};
+
 const menu = document.querySelector('#sandwich');
 const crossElement = document.querySelector('#bar img');
 const mobileMenu = document.querySelector('#mobile-menu');
@@ -5,9 +11,10 @@ const works = document.querySelector('.works');
 const popupWindow = document.querySelector('.popup-window');
 let content = '';
 const email = document.querySelector('input[type="email"]');
+const nom = document.querySelector('input[id="name"]');
+const message = document.querySelector('textarea');
 const errorTag = document.querySelector('#error');
 const form = document.querySelector('form');
-// const menuItems= document.querySelector("options");
 const projets = [
   {
     key: 0,
@@ -242,6 +249,8 @@ const validation = () => {
       showMessage(span, email);
     }
     if (email.validity.valid) {
+      formData.email = email.value;
+      localStorage.setItem('formData', JSON.stringify(formData));
       span.textContent = '';
     }
   });
@@ -262,9 +271,30 @@ const validation = () => {
     }
   });
 };
+const loadData = () => {
+  if (localStorage.getItem('formData')) {
+    formData = JSON.parse(localStorage.getItem('formData'));
+    email.value = formData.email;
+    nom.value = formData.name;
+    message.value = formData.message;
+  }
+};
+const saveData = () => {
+  nom.addEventListener('input', () => {
+    formData.name = nom.value;
+    localStorage.setItem('formData', JSON.stringify(formData));
+  });
+
+  message.addEventListener('input', () => {
+    formData.message = message.value;
+    localStorage.setItem('formData', JSON.stringify(formData));
+  });
+};
+loadData();
 addProjects();
 hideMenu();
 displayMenu();
 menuItemsClicked();
 displayPopup();
 validation();
+saveData();
