@@ -282,7 +282,7 @@ const loadData = () => {
 const saveData = () => {
   nom.addEventListener('input', () => {
     formData.name = nom.value;
-    localStorage.setItem('formData', JSON.stringify(formData));
+    localStorage.setItem('formData', JSON.stringify(formData));;
   });
 
   message.addEventListener('input', () => {
