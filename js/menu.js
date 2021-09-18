@@ -133,19 +133,19 @@ const addProjects = () => {
 };
 const displayMenu = () => {
   menu.addEventListener('click', () => {
-    document.querySelector('#mobile-menu').classList.remove('hidden');
+    document.querySelector('#mobile-menu').classList.add('show');
   });
 };
 const hideMenu = () => {
   crossElement.addEventListener('click', () => {
-    mobileMenu.classList.add('hidden');
+    mobileMenu.classList.remove('show');
   });
 };
 const menuItemsClicked = () => {
   const anchors = document.querySelectorAll('.options li a');
   anchors.forEach((anchor) => {
     anchor.addEventListener('click', () => {
-      mobileMenu.classList.add('hidden');
+      mobileMenu.classList.remove('show');
     });
   });
 };
@@ -282,7 +282,7 @@ const loadData = () => {
 const saveData = () => {
   nom.addEventListener('input', () => {
     formData.name = nom.value;
-    localStorage.setItem('formData', JSON.stringify(formData));;
+    localStorage.setItem('formData', JSON.stringify(formData));
   });
 
   message.addEventListener('input', () => {
@@ -290,6 +290,12 @@ const saveData = () => {
     localStorage.setItem('formData', JSON.stringify(formData));
   });
 };
+
+window.addEventListener('scroll', () => {
+  if (window.pageYOffset >= 5 && window.innerWidth >= 805) {
+    document.querySelector('header').classList.add('ombre');
+  } else document.querySelector('header').classList.remove('ombre');
+});
 loadData();
 addProjects();
 hideMenu();
