@@ -1,11 +1,20 @@
+let formData = {
+  name: '',
+  email: '',
+  message: '',
+};
+
 const menu = document.querySelector('#sandwich');
 const crossElement = document.querySelector('#bar img');
 const mobileMenu = document.querySelector('#mobile-menu');
 const works = document.querySelector('.works');
 const popupWindow = document.querySelector('.popup-window');
 let content = '';
-console.log(window.innerWidth);
-// const menuItems= document.querySelector("options");
+const email = document.querySelector('input[type="email"]');
+const nom = document.querySelector('input[id="name"]');
+const message = document.querySelector('textarea');
+const errorTag = document.querySelector('#error');
+const form = document.querySelector('form');
 const projets = [
   {
     key: 0,
@@ -124,19 +133,19 @@ const addProjects = () => {
 };
 const displayMenu = () => {
   menu.addEventListener('click', () => {
-    document.querySelector('#mobile-menu').classList.remove('hidden');
+    document.querySelector('#mobile-menu').classList.add('show');
   });
 };
 const hideMenu = () => {
   crossElement.addEventListener('click', () => {
-    mobileMenu.classList.add('hidden');
+    mobileMenu.classList.remove('show');
   });
 };
 const menuItemsClicked = () => {
   const anchors = document.querySelectorAll('.options li a');
   anchors.forEach((anchor) => {
     anchor.addEventListener('click', () => {
-      mobileMenu.classList.add('hidden');
+      mobileMenu.classList.remove('show');
     });
   });
 };
@@ -223,8 +232,75 @@ const displayPopup = () => {
   });
 };
 
+const showMessage = (tagElement, targetElement) => {
+  tagElement.textContent = '';
+  tagElement.textContent = targetElement.validationMessage;
+  errorTag.appendChild(tagElement);
+};
+const validation = () => {
+  const span = document.createElement('span');
+  span.classList.add('text-red');
+  span.classList.add('m-l-5');
+  span.classList.add('text-small');
+  span.classList.add('text-bold');
+  span.classList.add('bg-white');
+  email.addEventListener('input', () => {
+    if (email.validity.typeMismatch) {
+      showMessage(span, email);
+    }
+    if (email.validity.valid) {
+      formData.email = email.value;
+      localStorage.setItem('formData', JSON.stringify(formData));
+      span.textContent = '';
+    }
+  });
+  email.addEventListener('focus', () => {
+    if (email.validity.valueMissing) {
+      showMessage(span, email);
+    }
+    if (email.validity.valid) {
+      span.textContent = '';
+    }
+  });
+  form.addEventListener('submit', (e) => {
+    if (!email.validity.valid) {
+      showMessage(span, email);
+      e.preventDefault();
+    } else {
+      form.submit();
+    }
+  });
+};
+const loadData = () => {
+  if (localStorage.getItem('formData')) {
+    formData = JSON.parse(localStorage.getItem('formData'));
+    email.value = formData.email;
+    nom.value = formData.name;
+    message.value = formData.message;
+  }
+};
+const saveData = () => {
+  nom.addEventListener('input', () => {
+    formData.name = nom.value;
+    localStorage.setItem('formData', JSON.stringify(formData));
+  });
+
+  message.addEventListener('input', () => {
+    formData.message = message.value;
+    localStorage.setItem('formData', JSON.stringify(formData));
+  });
+};
+
+window.addEventListener('scroll', () => {
+  if (window.pageYOffset >= 5 && window.innerWidth >= 805) {
+    document.querySelector('header').classList.add('ombre');
+  } else document.querySelector('header').classList.remove('ombre');
+});
+loadData();
 addProjects();
 hideMenu();
 displayMenu();
 menuItemsClicked();
 displayPopup();
+validation();
+saveData();

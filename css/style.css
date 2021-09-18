@@ -6,8 +6,26 @@
 
 * { font-family: "Poppins-Regular", Helvetica, Arial, Verdana, Tahoma, sans-serif !important; }
 
+.ombre {
+  box-shadow: 0 8px 18px black !important;
+  position: fixed !important;
+  width: 100%;
+}
+
 .container {
   background: #e5e5e5;
+}
+
+input[type="email"]:invalid {
+  border: 1px dashed red;
+}
+
+input[type="email"]:invalid + input[type="submit"]::after {
+  content: "jnjnjnjnjn";
+}
+
+.text-small {
+  font-size: 11px;
 }
 
 .grid {
@@ -16,6 +34,10 @@
 
 .text-bold {
   font-weight: bold;
+}
+
+.text-red {
+  color: red;
 }
 
 .popup-title {
@@ -57,16 +79,21 @@
 
 .tunaweza-menu {
   position: fixed;
-  left: 0;
+  left: -100%;
   top: 0;
   background-color: rgba(71, 79, 151, 0.8) !important;
   width: 100%;
   height: 100vh;
   z-index: 5000;
+  transition: left 1s;
 }
 
 .hidden {
   display: none !important;
+}
+
+.show {
+  left: 0;
 }
 
 .width-12-image {
