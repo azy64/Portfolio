@@ -57,16 +57,17 @@ const projets = [
   },
   {
     key: 3,
-    name: 'Multi-Post<br>Stories',
-    description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-    textDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-     when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-     It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent`,
-    featuredImage: './images/c3.png',
-    technologies: ['html', 'css', 'javascript'],
+    name: 'REACT using COVID API',
+    description: 'This React capstone project is about building a mobile web application to check a list of metrics (numeric values) that we created making use of React and Redux.',
+    textDescription: `We selected an API that provides numeric data about a topic that we like and then build the web app around it. The web app has several pages:
+
+    one page with a list of items that could be filtered by some parameters. An example can be a list of metrics that can be filtered by the country (imagine a search field to introduce the country name like Italy, Croatia, etc.). This page should be our homepage.
+    
+    one page for the item details; in the example, the detail page for Czech Republic cities with a number of views.`,
+    featuredImage: 'https://github.com/azy64/react-capstone/blob/dev/screen1.png?raw=true',
+    technologies: ['React', 'Redux', 'html', 'css', 'javascript'],
     linkToLiveVersion: 'https://azy64.github.io/Portfolio/',
-    linkToSource: 'https://github.com/azy64/Portfolio',
+    linkToSource: 'https://github.com/azy64/react-capstone',
   },
 ];
 const getLink = (tab = []) => {
@@ -83,7 +84,7 @@ const giveOrder = (index) => {
   return '';
 };
 const addCard = ({
-  key, name, description, featuredImage, technologies,
+  key, name, description, featuredImage, technologies, linkToSource,
 }) => {
   const card = `
   <div class="card w-90 bg-white b-rounded ">
@@ -115,7 +116,7 @@ const addCard = ({
               </ul>
           </div>
           <div class="card-sup w-90">
-              <a class="underline-none popup-click" href="#">
+              <a class="underline-none popup-click" href="${linkToSource}">
                   See Project
               </a>
           </div>
