@@ -31,16 +31,14 @@ const projets = [
   },
   {
     key: 1,
-    name: 'Multi-Post<br>Stories',
-    description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-    textDescription: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-     when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-     It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent`,
-    featuredImage: './images/c2.png',
-    technologies: ['html', 'css', 'javascript'],
-    linkToLiveVersion: 'https://azy64.github.io/Portfolio/',
-    linkToSource: 'https://github.com/azy64/Portfolio',
+    name: 'Display Nodes from API',
+    description: 'Using an API to display the nodes of a graph.',
+    textDescription: `using an API to display the nodes of a graph. This application is a simple example of how to use the Graph API to display a graph.
+    Nodes are taken from other server and with Redux we dispatch an action to the store to update the state. `,
+    featuredImage: './images/nodes.png',
+    technologies: ['React', 'Redux', 'javascript', 'Css'],
+    linkToLiveVersion: 'https://github.com/azy64/-toy-blocks-client-react',
+    linkToSource: 'https://github.com/azy64/-toy-blocks-client-react',
   },
   {
     key: 2,
